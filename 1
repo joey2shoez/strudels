@@ -1,0 +1,9 @@
+// bullshit first attempt at livecoding
+setcpm(35)
+$: sound ("<~ hh sd  ~ ~ oh sd hh*4>").fast(8).bank('RolandTR707') .cutoff("<3000 1000 2000 1000>") .dist(1)
+$: sound ("bd bd bd bd*2").bank('RolandTR707').dist(2)
+$: note ("a1 <c2 e3> a1 <c3 e2>") .fast(2) .s('sawtooth').cutoff(250).resonance(10).gain(.15).shape(.5).release(.05) .dist(1)
+._pianoroll()
+$: note ("a2 <a4 c5 a5 e5>") .s('square').cutoff(2000).decay(.03).sustain(0) .fast(4) .echo(4, 1/16, .5)
+._pianoroll()
+$: note ("a4") .sound ("pink*4").lpf("<2000 1000 500 250>").fast(32)
