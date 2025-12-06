@@ -1,6 +1,6 @@
 setcpm(28)
 //noise
-_$: note("a3 e4 a3 c4!8")
+$: note("a3 e4 a3 c4!8")
   .s("white")
   .decay(sine.slow(2) 
   .range(0.05,1))
@@ -16,8 +16,8 @@ $: s("~ hh cp hh ~ oh cp*2 hh*2") .bank("linndrum").gain(.3)
 //alt perc 
 _$: s("~ hh ~ hh ~ hh ~ hh*2") .bank("linndrum").gain(.3)
 //pizz melody
-$: note("~ a4  ~ e5 ~ a4 ~ c5") .s("gm_pizzicato_strings") .echo (4, 1/8, .5) .gain(.6)
+$: note("~ a4  ~ e5 ~ a4 ~ c5") .s("gm_pizzicato_strings") .echo (4, 1/8, .5) .gain(.7) .hpf(700)
 //chords
-$: chord("Am Em Am C").voicing() .s("gm_fx_crystal") .slow(4) .gain(.5) .lpf(2000)
+$: chord("Am Em Am C").voicing() .s("gm_fx_crystal") .slow(4) .gain(.5) .lpf(1500)
 //bass
 $: note("a1!8") .s("gm_slap_bass_1") .lpf(2000) .decay(.3)
